@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    137143,       2670]
-NotebookOptionsPosition[    135192,       2601]
-NotebookOutlinePosition[    135536,       2616]
-CellTagsIndexPosition[    135493,       2613]
+NotebookDataLength[    139385,       2733]
+NotebookOptionsPosition[    137160,       2655]
+NotebookOutlinePosition[    137504,       2670]
+CellTagsIndexPosition[    137461,       2667]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1876,7 +1876,8 @@ Cell[BoxData[
    3.64962091798258*^9}, {3.649620957562969*^9, 3.649620957606973*^9}, {
    3.649620995997032*^9, 3.6496210945135746`*^9}, {3.6496278520343213`*^9, 
    3.649627854751563*^9}, {3.6496278908884516`*^9, 3.6496279499705563`*^9}, {
-   3.6496291699098215`*^9, 3.649629215995127*^9}}],
+   3.6496291699098215`*^9, 3.649629215995127*^9}, {3.6496294340451117`*^9, 
+   3.64962944379848*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -2560,11 +2561,13 @@ Cell[TextData[{
  StyleBox["C.",
   FontWeight->"Bold",
   Background->RGBColor[1, 0.85, 0.85]],
- "\nThis point is a global minimum, as it is the lowest point on the parabola."
+ "\nThis point is a global minimum, as it is the lowest point on the \
+parabola. Which also means that this is the smallest possible area one could \
+make."
 }], "Text",
  CellChangeTimes->{{3.64962060085439*^9, 3.649620618762632*^9}, {
   3.6496208132697153`*^9, 3.649620823389679*^9}, {3.6496213165345016`*^9, 
-  3.6496213257521205`*^9}}],
+  3.6496213257521205`*^9}, {3.6496298210180473`*^9, 3.6496298357133875`*^9}}],
 
 Cell[TextData[{
  StyleBox["D.",
@@ -2578,24 +2581,75 @@ Cell[TextData[{
    RowBox[{"x", " ", "=", " ", 
     RowBox[{"\[PlusMinus]", "\[Infinity]"}]}], TraditionalForm]]],
  "\n(I initially tried FindMaximum as well, but it couldn\[CloseCurlyQuote]t \
-find \[Infinity]. Understandably.)"
+find \[Infinity]. Which makes a lot of sense.)"
 }], "Text",
  CellChangeTimes->{{3.649619245881733*^9, 3.649619250522232*^9}, {
   3.649620149088475*^9, 3.6496201795363903`*^9}, {3.6496202413493752`*^9, 
   3.649620361091604*^9}, {3.649620409279292*^9, 3.6496204344885044`*^9}, {
   3.6496204950704126`*^9, 3.649620495432675*^9}, {3.6496213479114017`*^9, 
-  3.6496214356569667`*^9}}],
+  3.6496214356569667`*^9}, {3.649629356793948*^9, 3.649629363174325*^9}}],
 
 Cell[TextData[{
  StyleBox["E.",
   FontWeight->"Bold",
   Background->RGBColor[1, 0.85, 0.85]],
- "\nThe wire should be cut  at ~1.40 units, using the larger portion for \
-assembling the square, and the smaller for the circle.\n"
+ "\nSince this problem only exists for 0 \[LessEqual] x \[LessEqual] 10 \
+units, (or 0 \[LessEqual] x \[LessEqual] 2.5 if it\[CloseCurlyQuote]s 100% a \
+square -> 4 sides), then the maximum area that can be made is to not cut the \
+wire at all and use all 10 units to make the circle.\nAfter some rearranging, \
+this would give..."
 }], "Text",
  CellChangeTimes->{{3.6496214458083944`*^9, 3.649621543325418*^9}, {
   3.6496275659511385`*^9, 3.649627566824944*^9}, {3.649629277286522*^9, 
-  3.649629292152031*^9}}]
+  3.649629292152031*^9}, {3.649629391140951*^9, 3.6496293940782456`*^9}, {
+  3.649629462427353*^9, 3.649629464857747*^9}, {3.649629854603894*^9, 
+  3.6496298954475307`*^9}, {3.649629939459015*^9, 3.6496300047504005`*^9}, {
+  3.6496300493033147`*^9, 3.649630101192071*^9}, {3.6496302153670225`*^9, 
+  3.649630229976899*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AreaFromCirc", "[", "c_", "]"}], " ", "=", " ", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"4", "\[Pi]"}]], 
+   SuperscriptBox["c", "2"], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "From", " ", "solving", " ", "circumference", " ", "for", " ", "r", " ", 
+     "and", " ", "substituting", " ", "into", " ", "area", " ", 
+     RowBox[{"formula", "."}]}], " ", "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.6496301063890715`*^9, 3.6496301296955132`*^9}, {
+  3.649630206864626*^9, 3.64963021051381*^9}, {3.6496302596425233`*^9, 
+  3.6496303345476894`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  SuperscriptBox["c", "2"], 
+  RowBox[{"4", " ", "\[Pi]"}]]], "Output",
+ CellChangeTimes->{3.649630335846223*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AreaFromCirc", "[", "10", "]"}]], "Input",
+ CellChangeTimes->{{3.6496303430132265`*^9, 3.649630346756425*^9}}],
+
+Cell[BoxData[
+ FractionBox["25", "\[Pi]"]], "Output",
+ CellChangeTimes->{3.649630351571719*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "So ",
+ StyleBox["25/\[Pi]",
+  FontWeight->"Bold"],
+ " is the largest area that can be made."
+}], "Text",
+ CellChangeTimes->{{3.6496303699669547`*^9, 3.6496303821010523`*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2655,21 +2709,30 @@ Cell[97793, 1828, 244, 8, 50, "Output"]
 }, Open  ]],
 Cell[98052, 1839, 137, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[98214, 1844, 1583, 34, 31, "Input"],
-Cell[99800, 1880, 31678, 610, 250, "Output"]
+Cell[98214, 1844, 1634, 35, 31, "Input"],
+Cell[99851, 1881, 31678, 610, 250, "Output"]
 }, Open  ]],
-Cell[131493, 2493, 357, 8, 49, "Text"],
+Cell[131544, 2494, 357, 8, 49, "Text"],
 Cell[CellGroupData[{
-Cell[131875, 2505, 863, 19, 31, "Input"],
-Cell[132741, 2526, 199, 6, 47, "Output"]
+Cell[131926, 2506, 863, 19, 31, "Input"],
+Cell[132792, 2527, 199, 6, 47, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[132977, 2537, 455, 12, 31, "Input"],
-Cell[133435, 2551, 165, 4, 31, "Output"]
+Cell[133028, 2538, 455, 12, 31, "Input"],
+Cell[133486, 2552, 165, 4, 31, "Output"]
 }, Open  ]],
-Cell[133615, 2558, 354, 8, 49, "Text"],
-Cell[133972, 2568, 783, 18, 68, "Text"],
-Cell[134758, 2588, 406, 9, 68, "Text"]
+Cell[133666, 2559, 481, 10, 49, "Text"],
+Cell[134150, 2571, 841, 18, 68, "Text"],
+Cell[134994, 2591, 903, 16, 68, "Text"],
+Cell[CellGroupData[{
+Cell[135922, 2611, 590, 14, 47, "Input"],
+Cell[136515, 2627, 141, 4, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[136693, 2636, 134, 2, 31, "Input"],
+Cell[136830, 2640, 95, 2, 47, "Output"]
+}, Open  ]],
+Cell[136940, 2645, 192, 6, 30, "Text"]
 }, Open  ]]
 }, Open  ]]
 }
