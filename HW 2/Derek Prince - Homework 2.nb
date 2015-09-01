@@ -1,0 +1,282 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8631,        273]
+NotebookOptionsPosition[      7820,        242]
+NotebookOutlinePosition[      8160,        257]
+CellTagsIndexPosition[      8117,        254]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 2", "Title",
+ CellChangeTimes->{{3.6491712963341722`*^9, 3.649171298593822*^9}, 
+   3.65011898848081*^9}],
+
+Cell["\<\
+Derek Prince
+APPM 2450 - 002, Fall 2015
+Due 4 September, 2015\
+\>", "Subtitle",
+ CellChangeTimes->{{3.649171354102372*^9, 3.6491714161854563`*^9}, {
+  3.6491715799723988`*^9, 3.649171580023193*^9}, {3.6491716286345663`*^9, 
+  3.649171649041956*^9}, {3.649171760233305*^9, 3.649171765332196*^9}, {
+  3.6501189770178103`*^9, 3.6501189770738106`*^9}, {3.6501201239710608`*^9, 
+  3.6501201378048267`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.649171551664373*^9, 3.649171559637417*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1", "Section",
+ CellChangeTimes->{{3.649171478921135*^9, 3.649171479769392*^9}}],
+
+Cell[TextData[StyleBox["A.", "Subsubsection"]], "Text",
+ CellChangeTimes->{{3.649171498712278*^9, 3.649171537624853*^9}, {
+  3.649171659844653*^9, 3.6491717101551847`*^9}, {3.65011899899981*^9, 
+  3.6501190058078103`*^9}, {3.6501190739798107`*^9, 3.6501192243828106`*^9}, {
+  3.6501204679028187`*^9, 3.650120486246653*^9}, {3.650120876292797*^9, 
+  3.650120877516797*^9}}],
+
+Cell[TextData[{
+ "Particle 1: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "1"], "=", " ", 
+    RowBox[{"2", 
+     RowBox[{"cos", "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "1"], "=", " ", 
+    RowBox[{"2", 
+     RowBox[{"sin", "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", " ", "\[LessEqual]", " ", "t", " ", "\[LessEqual]", " ", 
+    RowBox[{"2", "\[Pi]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nParticle 2: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "2"], " ", "=", " ", 
+    RowBox[{"3", 
+     RowBox[{"cost", "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "2"], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"-", "1"}], " ", "+", " ", 
+     RowBox[{"sin", "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", " ", "\[LessEqual]", " ", "t", " ", "\[LessEqual]", " ", 
+    RowBox[{"2", "\[Pi]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{3.6501208815577965`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"p1", "[", "t_", "]"}], " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{"Cos", "[", "t", "]"}]}], ",", " ", 
+      RowBox[{"2", 
+       RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Particle", " ", "1"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p2", "[", "s_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"3", 
+     RowBox[{"Cos", "[", "t", "]"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"-", "1"}], " ", "+", " ", 
+     RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Particle", " ", "2"}], " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.65011904122381*^9, 3.6501190690458107`*^9}, {
+  3.6501195756398106`*^9, 3.6501195888328104`*^9}, {3.6501196435408106`*^9, 
+  3.6501197047776933`*^9}, {3.6501197438223047`*^9, 3.650119746678447*^9}, {
+  3.6501199937150145`*^9, 3.6501200060204754`*^9}, {3.650120240118285*^9, 
+  3.650120254063437*^9}, {3.65012031129816*^9, 3.6501203170177317`*^9}, {
+  3.6501218795107965`*^9, 3.650121883755797*^9}, {3.6501219618977966`*^9, 
+  3.6501219653367968`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"particle1", " ", "=", " ", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"p1", "[", "t", "]"}], ",", " ", "Red"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"particle2", " ", "=", " ", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"p2", "[", "t", "]"}], ",", "Blue"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"particle1", ",", " ", "particle2"}], "}"}], ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"PlotRange", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "3"}], ",", "3"}], "}"}]}], ",", " ", 
+    RowBox[{"AxesLabel", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<t\>\"", ",", " ", "Bold"}], "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<r\>\"", ",", " ", "Bold"}], "]"}]}], "}"}]}]}], "]"}], 
+  " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Aspect", " ", "Ratio", " ", 
+    RowBox[{"doesn", "'"}], "t", " ", "like", " ", "working", " ", "with", 
+    " ", "both", " ", "functions", " ", "at", " ", 
+    RowBox[{"once", "."}]}], " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.6501203205560856`*^9, 3.650120407197749*^9}, {
+  3.650120494090437*^9, 3.6501205316341915`*^9}, {3.6501206557145977`*^9, 
+  3.65012066883491*^9}, {3.6501207140044265`*^9, 3.65012073984601*^9}, {
+  3.650120949492797*^9, 3.650121065908797*^9}, {3.6501211440017967`*^9, 
+  3.6501212006077967`*^9}, {3.650121244987797*^9, 3.650121566441797*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["B.", "Subsubsection",
+ CellChangeTimes->{{3.6501208427022953`*^9, 3.6501208642137966`*^9}}],
+
+Cell["", "Text"],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{"cos", "[", "t", "]"}]}], " ", "=", " ", 
+      RowBox[{"3", 
+       RowBox[{"cos", "[", "t", "]"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{"Sin", "[", "s", "]"}]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"-", "1"}], " ", "+", " ", 
+       RowBox[{"Sin", "[", "s", "]"}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "2"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6501217147797966`*^9, 3.650121774811797*^9}, {
+  3.6501218899587965`*^9, 3.650121925723797*^9}, {3.6501219710547967`*^9, 
+  3.6501220347657967`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"p1", "[", "t", "]"}], "=", 
+    RowBox[{"p2", "[", "t", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6501218110477967`*^9, 3.650121826520797*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"intersect1", " ", "="}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"intersect2", " ", "="}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"intersect3", " ", "="}], " ", ";"}]}], "Input",
+ CellChangeTimes->{{3.6501216180767965`*^9, 3.650121639946797*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{944, 1112},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 120, 2, 101, "Title"],
+Cell[703, 26, 411, 9, 126, "Subtitle"],
+Cell[1117, 37, 157, 3, 31, "Input"],
+Cell[CellGroupData[{
+Cell[1299, 44, 94, 1, 70, "Section"],
+Cell[1396, 47, 372, 5, 41, "Text"],
+Cell[1771, 54, 1301, 47, 49, "Text"],
+Cell[3075, 103, 1205, 30, 52, "Input"],
+Cell[4283, 135, 1937, 50, 112, "Input"],
+Cell[CellGroupData[{
+Cell[6245, 189, 97, 1, 39, "Subsubsection"],
+Cell[6345, 192, 16, 0, 30, "Text"],
+Cell[6364, 194, 808, 24, 31, "Input"],
+Cell[7175, 220, 287, 8, 31, InheritFromParent],
+Cell[7465, 230, 315, 7, 72, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
