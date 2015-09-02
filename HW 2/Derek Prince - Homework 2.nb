@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46408,        901]
-NotebookOptionsPosition[     45601,        869]
-NotebookOutlinePosition[     45942,        884]
-CellTagsIndexPosition[     45899,        881]
+NotebookDataLength[     50617,       1023]
+NotebookOptionsPosition[     49429,        979]
+NotebookOutlinePosition[     49770,        994]
+CellTagsIndexPosition[     49727,        991]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -137,63 +137,201 @@ Cell[BoxData[{
   3.650134320379758*^9}, {3.65013559874926*^9, 3.65013562830968*^9}, {
   3.650135805675762*^9, 3.6501358866751423`*^9}}],
 
-Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"partplot", " ", "=", " ", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+       RowBox[{"r2", "[", "t", "]"}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", " ", "0", ",", " ", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<x\>\"", ",", " ", "Bold", ",", "Medium"}], "]"}], ",", 
+        " ", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<y\>\"", ",", " ", "Bold", ",", " ", "Medium"}], "]"}]}],
+        "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", " ", "Blue"}], "}"}]}]}], "]"}]}], ";"}]], "Input",\
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"particle1", " ", "=", " ", 
-   RowBox[{"ParametricPlot", "[", 
-    RowBox[{
-     RowBox[{"Style", "[", 
-      RowBox[{
-       RowBox[{"r1", "[", "t", "]"}], ",", " ", "Red"}], "]"}], ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", " ", "0", ",", " ", 
-       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"particle2", " ", "=", " ", 
-   RowBox[{"ParametricPlot", "[", 
-    RowBox[{
-     RowBox[{"Style", "[", 
-      RowBox[{
-       RowBox[{"r2", "[", "t", "]"}], ",", "Blue"}], "]"}], ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", " ", "0", ",", " ", 
-       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Show", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"particle1", ",", " ", "particle2"}], "}"}], ",", " ", 
-    "\[IndentingNewLine]", 
-    RowBox[{"PlotRange", " ", "\[Rule]", " ", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"-", "3"}], ",", "3"}], "}"}]}], ",", " ", 
-    RowBox[{"AxesLabel", "\[Rule]", " ", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"Style", "[", 
-        RowBox[{"\"\<x\>\"", ",", " ", "Bold", ",", " ", "Medium"}], "]"}], 
-       ",", " ", 
-       RowBox[{"Style", "[", 
-        RowBox[{"\"\<y\>\"", ",", " ", "Bold", ",", " ", "Medium"}], "]"}]}], 
-      "}"}]}]}], "]"}], " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{"Aspect", " ", "Ratio", " ", 
-     RowBox[{"doesn", "'"}], "t", " ", "like", " ", "working", " ", "with", 
-     " ", "both", " ", "functions", " ", "at", " ", "once"}], " ", "-", " ", 
-    "thus"}], "  ", "*)"}]}]}], "Input",
  CellChangeTimes->{{3.6501203205560856`*^9, 3.650120407197749*^9}, {
   3.650120494090437*^9, 3.6501205316341915`*^9}, {3.6501206557145977`*^9, 
   3.65012066883491*^9}, {3.6501207140044265`*^9, 3.65012073984601*^9}, {
   3.650120949492797*^9, 3.650121065908797*^9}, {3.6501211440017967`*^9, 
   3.6501212006077967`*^9}, {3.650121244987797*^9, 3.650121566441797*^9}, {
   3.6501339915148945`*^9, 3.650134014499523*^9}, {3.6501342866736217`*^9, 
-  3.6501342897768664`*^9}, {3.6501359211071095`*^9, 3.6501359222302685`*^9}}],
+  3.6501342897768664`*^9}, {3.6501359211071095`*^9, 3.6501359222302685`*^9}, {
+  3.650142764641548*^9, 3.650142767543028*^9}, {3.6501471149586143`*^9, 
+  3.650147238048768*^9}, {3.650147270977807*^9, 3.6501472738748093`*^9}, {
+  3.6501473657664485`*^9, 3.650147395057392*^9}, {3.650147626252254*^9, 
+  3.6501476396344624`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["B.", "Subsubsection",
+ CellChangeTimes->{{3.6501208427022953`*^9, 3.6501208642137966`*^9}}],
+
+Cell["this", "Text",
+ CellChangeTimes->{{3.6501461699153137`*^9, 3.6501461701360893`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"intersect1", " ", "=", " ", 
+   RowBox[{"FindRoot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"r1", "[", "t", "]"}], "==", 
+      RowBox[{"r2", "[", "s", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", "1"}], "}"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"intersect2", "=", 
+   RowBox[{"FindRoot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"r1", "[", "t", "]"}], "==", 
+      RowBox[{"r2", "[", "s", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", "3"}], "}"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"col", " ", "=", " ", 
+   RowBox[{"FindRoot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"r1", "[", "t", "]"}], "==", 
+      RowBox[{"r2", "[", "s", "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t", ",", "6"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", " ", "6"}], "}"}]}], "}"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6501217147797966`*^9, 3.650121774811797*^9}, {
+  3.6501218899587965`*^9, 3.650121925723797*^9}, {3.6501219710547967`*^9, 
+  3.6501220347657967`*^9}, {3.6501329059926853`*^9, 3.6501329337882524`*^9}, {
+  3.650133152509288*^9, 3.6501332349115314`*^9}, {3.6501332759847736`*^9, 
+  3.6501332795988145`*^9}, {3.6501341925382595`*^9, 3.650134220239885*^9}, {
+  3.650134858412575*^9, 3.650134884856995*^9}, {3.650135534696885*^9, 
+  3.650135558652182*^9}, {3.6501356603616433`*^9, 3.650135708533337*^9}, {
+  3.65013580976644*^9, 3.650135855050332*^9}, {3.6501358953363743`*^9, 
+  3.650135901660695*^9}, {3.6501407036773806`*^9, 3.6501407979496365`*^9}, {
+  3.650142049653078*^9, 3.6501420498680754`*^9}, {3.6501455193919954`*^9, 
+  3.6501456390613637`*^9}}],
+
+Cell["Now for the graphics...", "Text",
+ CellChangeTimes->{{3.6501456539059315`*^9, 3.6501456605411587`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"circIntersect1", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Green", ",", " ", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"r1", "[", "t", "]"}], "/.", "intersect1"}], ",", " ", 
+        "0.20"}], "]"}]}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"circIntersect2", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Green", ",", " ", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"r1", "[", "t", "]"}], "/.", "intersect2"}], ",", " ", 
+        "0.20"}], "]"}]}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"circCol", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Purple", ",", " ", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"r1", "[", "t", "]"}], "/.", "col"}], ",", " ", "0.25"}], 
+       "]"}]}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"label", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", " ", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Collision!\>\"", ",", " ", "Large", ",", " ", "Bold"}], 
+         "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"-", "1.4"}]}], "}"}]}], "]"}]}], "}"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6501456710681524`*^9, 3.6501457150530796`*^9}, {
+   3.650145811089198*^9, 3.650146125288764*^9}, {3.6501474214757004`*^9, 
+   3.650147592731992*^9}, 3.650148021733672*^9, {3.650148108250867*^9, 
+   3.6501481166060104`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["C.", "Subsubsection",
+ CellChangeTimes->{{3.6501461624273844`*^9, 3.6501461626774445`*^9}}],
+
+Cell["\<\
+A vector velocity is a line tangent to the intersection, so I have to make an \
+arrow graphic alligned with the derivative at the place I place it.\
+\>", "Text",
+ CellChangeTimes->{{3.6501461667321796`*^9, 3.650146166933772*^9}, {
+  3.650147678521744*^9, 3.6501477472125387`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"velar", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Arrow", "[", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6501470066112947`*^9, 3.6501470256485443`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"The", " ", "Graph"}], "Subsubsection"]], "Input",
+ CellChangeTimes->{{3.6501470800962076`*^9, 3.6501470978314104`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Graph", " ", "The"}]], "Output",
+ CellChangeTimes->{3.6501474868742228`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+  "partplot", ",", " ", "circIntersect1", ",", " ", "circIntersect2", ",", 
+   " ", "circCol", ",", " ", "label"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6501471068960857`*^9, 3.650147107848634*^9}, {
+  3.650147244599352*^9, 3.6501472478975797`*^9}, {3.650147278761794*^9, 
+  3.6501473254336987`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {}, 
@@ -497,7 +635,7 @@ WqnUpjsKFyy/j5eRPFAee+FUfCTuG+gWJD0OEvz9KjhGw3H58bhH6iTL+A59
 fOEUjOXiLJHXJBvqNmhT1wagH9TQUkm+cmzwmkm8NxrLrdrc9N/nFBd0Z746
 vUOR8CTH8f8+ByntuNkm/gXe504gl0sAsfxrzeN4K/zf/8tx6a6VlYguyP0/
 KDLT/g==
-      "]]}}, {{}, {}, 
+      "]]}, 
     {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], FaceForm[Opacity[
      0.3]], LineBox[CompressedData["
 1:eJw123k4Vd8XMPCL6x5RMjVpQhSVsYGEc0RSXyEZIkpKaBAhkiQRImRKRMqQ
@@ -799,7 +937,17 @@ ZMseuUUFhJR+KYgwktMdqHONClICUuXthKWP7fnzXIsKOXzetB0MBBOO5V9M
 VKOC4OTXWg3Cx8SCWVsUqeAx6WrgQvhw3QkWxkkqhIVvvosjnBv3gyp2nAo/
 f/K7lBG2q/7VoHuICrWiVTt6CS8Z0+Jf8FPh3WnmmzTCEq777ZK4iedTww3o
 hF/pjMq3slHh/38vx/T/vpf7P8WDjZA=
-      "]]}}},
+      "]]}}, 
+   {RGBColor[0, 1, 0], DiskBox[{1.984313483298443, -0.25}, 0.2]}, 
+   {RGBColor[0, 1, 0], 
+    DiskBox[{-1.984313483298443, -0.24999999999999986`}, 0.2]}, 
+   {RGBColor[0.5, 0, 0.5], 
+    DiskBox[{8.916368762110865*^-8, -1.999999999999998}, 0.25]}, 
+   {RGBColor[1, 0, 0], InsetBox[
+     StyleBox["\<\"Collision!\"\>",
+      StripOnInput->False,
+      FontSize->Large,
+      FontWeight->Bold], {0, -1.4}]}},
   Axes->{True, True},
   AxesLabel->{
     FormBox[
@@ -813,7 +961,8 @@ hF/pjMq3slHh/38vx/T/vpf7P8WDjZA=
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
   Method->{"ScalingFunctions" -> None},
-  PlotRange->{-3, 3},
+  PlotRange->{{-2.9999996494055186`, 3.}, {-1.9999998592812047`, 
+   1.999999756548977}},
   PlotRangeClipping->True,
   PlotRangePadding->{{
      Scaled[0.05], 
@@ -821,48 +970,9 @@ hF/pjMq3slHh/38vx/T/vpf7P8WDjZA=
      Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.650135937193839*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["B.", "Subsubsection",
- CellChangeTimes->{{3.6501208427022953`*^9, 3.6501208642137966`*^9}}],
-
-Cell["", "Text"],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"intersect1", " ", "=", " ", 
-   RowBox[{"FindRoot", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"r1", "[", "t", "]"}], "\[Equal]", 
-      RowBox[{"r2", "[", "s", "]"}]}], ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", "1"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"s", ",", "1"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"intersect2", "=", 
-   RowBox[{"FindRoot", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"r1", "[", "t", "]"}], "\[Equal]", 
-      RowBox[{"r2", "[", "s", "]"}]}], ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", "3"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"s", ",", "3"}], "}"}]}], "]"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.6501217147797966`*^9, 3.650121774811797*^9}, {
-  3.6501218899587965`*^9, 3.650121925723797*^9}, {3.6501219710547967`*^9, 
-  3.6501220347657967`*^9}, {3.6501329059926853`*^9, 3.6501329337882524`*^9}, {
-  3.650133152509288*^9, 3.6501332349115314`*^9}, {3.6501332759847736`*^9, 
-  3.6501332795988145`*^9}, {3.6501341925382595`*^9, 3.650134220239885*^9}, {
-  3.650134858412575*^9, 3.650134884856995*^9}, {3.650135534696885*^9, 
-  3.650135558652182*^9}, {3.6501356603616433`*^9, 3.650135708533337*^9}, {
-  3.65013580976644*^9, 3.650135855050332*^9}, {3.6501358953363743`*^9, 
-  3.650135901660695*^9}}]
+ CellChangeTimes->{{3.650147486889494*^9, 3.6501475951085806`*^9}, 
+   3.650147642184435*^9}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -892,14 +1002,26 @@ Cell[1299, 44, 94, 1, 70, "Section"],
 Cell[1396, 47, 372, 5, 41, "Text"],
 Cell[1771, 54, 1301, 47, 49, "Text"],
 Cell[3075, 103, 1431, 34, 72, "Input"],
+Cell[4509, 139, 1612, 35, 52, "Input"],
 Cell[CellGroupData[{
-Cell[4531, 141, 2169, 54, 112, "Input"],
-Cell[6703, 197, 37366, 626, 414, "Output"]
+Cell[6146, 178, 97, 1, 39, "Subsubsection"],
+Cell[6246, 181, 90, 1, 30, "Text"],
+Cell[6339, 184, 2005, 53, 72, "Input"],
+Cell[8347, 239, 109, 1, 30, "Text"],
+Cell[8459, 242, 1715, 48, 92, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44106, 828, 97, 1, 39, "Subsubsection"],
-Cell[44206, 831, 16, 0, 30, "Text"],
-Cell[44225, 833, 1336, 31, 52, "Input"]
+Cell[10211, 295, 97, 1, 39, "Subsubsection"],
+Cell[10311, 298, 290, 5, 49, "Text"],
+Cell[10604, 305, 216, 5, 31, "Input"],
+Cell[CellGroupData[{
+Cell[10845, 314, 155, 3, 42, "Input"],
+Cell[11003, 319, 100, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11140, 326, 350, 7, 31, "Input"],
+Cell[11493, 335, 37884, 638, 266, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
