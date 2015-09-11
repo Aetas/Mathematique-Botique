@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6693,        212]
-NotebookOptionsPosition[      5741,        175]
-NotebookOutlinePosition[      6081,        190]
-CellTagsIndexPosition[      6038,        187]
+NotebookDataLength[     19278,        513]
+NotebookOptionsPosition[     17507,        448]
+NotebookOutlinePosition[     17848,        463]
+CellTagsIndexPosition[     17805,        460]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -77,28 +77,26 @@ Cell[BoxData[{
     RowBox[{"only", " ", "direction"}]}], " ", 
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Gb", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{"2", ",", "1", ",", "3"}], "}"}]}], ";", " ", 
+  RowBox[{
+   RowBox[{"Gb", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "1", ",", "3"}], "}"}]}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{"Base", " ", "of", " ", 
-    RowBox[{"Gerald", "'"}], "s", " ", "neck"}], " ", "*)"}], 
-  "\[IndentingNewLine]", 
-  RowBox[{"Gl", " ", "=", " ", "4"}], ";", " ", 
+    RowBox[{"Gerald", "'"}], "s", " ", "neck"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Gl", " ", "=", " ", "4"}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"Gerald", "'"}], "s", " ", "neck", " ", "length"}], " ", "*)"}], 
-  "\[IndentingNewLine]", 
-  RowBox[{"Gt", " ", "=", " ", 
-   RowBox[{"{", "}"}]}], ";", " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{"Location", " ", "of", " ", "the", " ", "top", " ", "of", " ", 
-    RowBox[{"Gerald", "'"}], "s", " ", "head"}], " ", "*)"}]}]}], "Input",
+    RowBox[{"Gerald", "'"}], "s", " ", "neck", " ", "length"}], " ", 
+   "*)"}]}]}], "Input",
  CellChangeTimes->{{3.6507256076162767`*^9, 3.650725650273162*^9}, {
   3.6507257108781614`*^9, 3.650725873629162*^9}, {3.650725909299162*^9, 
   3.6507259262011614`*^9}, {3.6507259743591614`*^9, 3.650726019483162*^9}, {
   3.6507262621211615`*^9, 3.6507262780281615`*^9}, {3.650726530351162*^9, 
-  3.650726538143162*^9}}],
+  3.650726538143162*^9}, {3.650918933588475*^9, 3.650918934330476*^9}}],
 
 Cell[CellGroupData[{
 
@@ -114,14 +112,31 @@ by a time scalar, giving time-dependant position.\
    3.650723933768173*^9}, {3.6507244042931733`*^9, 3.6507244060851736`*^9}, {
    3.6507263762701616`*^9, 3.6507263970941615`*^9}, 3.650726515950162*^9}],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
-   RowBox[{"F", " ", "+", " ", 
-    RowBox[{"t", "*", "V"}]}]}], ";"}]], "Input",
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"4", ",", "2", ",", "8"}], "}"}], " ", "+", " ", 
+    RowBox[{"t", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "2"}], ",", "1", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+    RowBox[{"F", " ", "+", " ", 
+     RowBox[{"t", "*", "V", " ", 
+      RowBox[{"wasn", "'"}], "t", " ", "cooperating"}]}]}], " ", 
+   "*)"}]}]}], "Input",
  CellChangeTimes->{{3.6507260802671614`*^9, 3.6507261996581616`*^9}, {
-  3.6507264020381613`*^9, 3.6507264029181614`*^9}}]
+   3.6507264020381613`*^9, 3.6507264029181614`*^9}, 3.650917017065222*^9, 
+   3.6509170525062904`*^9, {3.6509173018417597`*^9, 3.6509173766500993`*^9}, {
+   3.650917428108877*^9, 3.650917528199854*^9}, {3.6509182867580137`*^9, 
+   3.6509182918045363`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -129,53 +144,311 @@ Cell[CellGroupData[{
 Cell["(b)", "Subsubsection",
  CellChangeTimes->{{3.6507263069301615`*^9, 3.6507263078101616`*^9}}],
 
-Cell["temp", "Text",
+Cell["\<\
+Set frank as a 3D parametric plot for later. -5 \[LessEqual] t \[LessEqual] 5 \
+was specified.\
+\>", "Text",
  CellChangeTimes->{{3.6507264266191616`*^9, 3.6507264267311616`*^9}, {
-  3.6507269041601615`*^9, 3.650726906103162*^9}}],
+  3.6507269041601615`*^9, 3.650726906103162*^9}, {3.650917551224026*^9, 
+  3.6509176136291766`*^9}}],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[{
- RowBox[{"r", "[", "5", "]"}], "\[IndentingNewLine]", 
- RowBox[{"r", "[", 
-  RowBox[{"-", "5"}], "]"}]}], "Input",
- CellChangeTimes->{{3.6507264408641615`*^9, 3.650726490865162*^9}, {
-  3.6507265700131617`*^9, 3.650726577476162*^9}, {3.6507267841531615`*^9, 
-  3.650726845405162*^9}}],
+Cell[BoxData[
+ RowBox[{"frank", " ", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<x\>\"", ",", "\"\<y\>\"", ",", "\"\<z\>\""}], "}"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6507268480241613`*^9, 3.6507268846511617`*^9}, {
+  3.6509167158557625`*^9, 3.650916737793964*^9}, {3.6509167704734154`*^9, 
+  3.6509167705634165`*^9}, {3.650916969511561*^9, 3.6509169838470736`*^9}, {
+  3.650917031921325*^9, 3.650917034803323*^9}, {3.650917096165969*^9, 
+  3.6509171110817337`*^9}, {3.650917152807396*^9, 3.6509171714485264`*^9}, {
+  3.6509172368443003`*^9, 3.650917250152488*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"-", "6"}], ",", "7", ",", "3"}], "}"}]], "Output",
- CellChangeTimes->{3.6507268270401616`*^9}],
+ Graphics3DBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[2], 
+    Line3DBox[CompressedData["
+1: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
+     "]]}},
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"x\"", TraditionalForm], 
+    FormBox["\"y\"", TraditionalForm], 
+    FormBox["\"z\"", TraditionalForm]},
+  DisplayFunction->Identity,
+  FaceGridsStyle->Automatic,
+  ImageSize->{364.30364715631833`, 267.37784286086884`},
+  Method->{},
+  PlotRange->{{-5.999999591836735, 
+   13.999999591836735`}, {-2.9999997959183675`, 6.9999997959183675`}, {
+   3.0000002040816325`, 12.999999795918367`}},
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02], 
+    Scaled[0.02]},
+  Ticks->{Automatic, Automatic, Automatic},
+  ViewPoint->{1.6207724843511713`, -1.9991984984387627`, -2.196884593648553},
+  ViewVertical->{
+   0.07503722062750098, -1.8299249148537147`, -0.7930021866802293}]], "Output",\
 
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"14", ",", 
-   RowBox[{"-", "3"}], ",", "13"}], "}"}]], "Output",
- CellChangeTimes->{3.6507268270411615`*^9}]
+ CellChangeTimes->{
+  3.650917060188733*^9, {3.650917096844832*^9, 3.6509171114074407`*^9}, {
+   3.6509171601068597`*^9, 3.6509171720462174`*^9}, 3.650917250576649*^9, 
+   3.650917337854227*^9, {3.650917383770274*^9, 3.6509174329471073`*^9}, 
+   3.6509174672021914`*^9, 3.6509175320871315`*^9}]
+}, Open  ]]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell["(c)", "Subsubsection",
+ CellChangeTimes->{{3.650917653559846*^9, 3.650917653980835*^9}}],
+
+Cell["\<\
+Geralds neck is located at Gb (defined above), I just need to make a sphere \
+object at it\[CloseCurlyQuote]s location.\
+\>", "Text",
+ CellChangeTimes->{{3.650917673332819*^9, 3.650917720471857*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{"Plot3D", "[", 
+ RowBox[{
+  RowBox[{"gnb", " ", "=", " ", 
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{"Sphere", "[", 
+     RowBox[{"Gb", ",", " ", ".5"}], "]"}], "]"}]}], ";", " ", 
+  RowBox[{"(*", " ", "GeraldNeckBase", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Show", "[", 
+   RowBox[{"frank", ",", " ", "gnb"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.650917732759388*^9, 3.650917762813812*^9}, {
+  3.650917793011999*^9, 3.65091792241363*^9}, {3.6509179892979364`*^9, 
+  3.6509179955534534`*^9}, {3.650918234473357*^9, 3.6509182541151323`*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[{{{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[2], 
+     Line3DBox[CompressedData["
+1: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
+      "]]}}, 
+   SphereBox[{2, 1, 3}, 0.5]},
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"x\"", TraditionalForm], 
+    FormBox["\"y\"", TraditionalForm], 
+    FormBox["\"z\"", TraditionalForm]},
+  DisplayFunction->Identity,
+  FaceGridsStyle->Automatic,
+  ImageSize->{359.1463892294547, 250.91190904955363`},
+  Method->{},
+  PlotRange->{{-5.999999591836735, 
+   13.999999591836735`}, {-2.9999997959183675`, 6.9999997959183675`}, {
+   3.0000002040816325`, 12.999999795918367`}},
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02], 
+    Scaled[0.02]},
+  Ticks->{Automatic, Automatic, Automatic},
+  ViewPoint->{-0.13758247364044499`, -3.175567313164685, 1.1605357825190128`},
+  
+  ViewVertical->{0.06015956887548822, -0.5650752062516037, 
+   1.9147358346180738`}]], "Output",
+ CellChangeTimes->{{3.6509178431576166`*^9, 3.650917917766081*^9}, {
+   3.6509179668770432`*^9, 3.65091796774266*^9}, 3.6509180139178934`*^9, {
+   3.6509182376320305`*^9, 3.6509182572054567`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(d)", "Subsubsection",
+ CellChangeTimes->{{3.65091802702831*^9, 3.65091802754961*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "is Gerald\[CloseCurlyQuote]s neck base location (Gb) - to find if his neck \
+can intersect with Frank\[CloseCurlyQuote]s path, I need to see if a vector \
+of length 4 with the same direction vector of Frank\[CloseCurlyQuote]s path \
+can ever intersect the path traced by r[t]. This is simply Gb - r[t], the \
+position vector from the path traced by r[t] to the base of Geralds neck."
+}], "Text",
+ CellChangeTimes->{{3.6509180352387457`*^9, 3.6509180842871785`*^9}, {
+  3.6509183772866697`*^9, 3.6509184701645336`*^9}, {3.6509185773920045`*^9, 
+  3.6509185884429097`*^9}, {3.650919656657175*^9, 3.650919717042362*^9}}],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{
-   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"fg", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"Gb", " ", "-", " ", 
+    RowBox[{"r", "[", "t", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.650918595381275*^9, 3.6509186334013476`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(e)", "Subsubsection",
+ CellChangeTimes->{{3.6509186415210533`*^9, 3.650918642513068*^9}}],
+
+Cell["\<\
+If the distance between the point and the line is ever less than 4, then it \
+can happen.\
+\>", "Text",
+ CellChangeTimes->{{3.6509186506826696`*^9, 3.650918663252556*^9}, {
+   3.650919726168392*^9, 3.6509197736629496`*^9}, {3.6509198067480173`*^9, 
+   3.6509198079810057`*^9}, 3.6509198616944933`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindMinimum", "[", 
+  RowBox[{
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{"fg", "[", "t", "]"}], ".", 
+     RowBox[{"fg", "[", "t", "]"}]}], "]"}], ",", " ", 
    RowBox[{"{", 
-    RowBox[{"x", ",", " ", 
-     RowBox[{"-", "6"}], ",", " ", "14"}], "}"}], ",", " ", 
+    RowBox[{"t", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.65091876579531*^9, 3.6509188752248898`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4.39696865275764`", ",", 
    RowBox[{"{", 
-    RowBox[{"y", ",", " ", 
-     RowBox[{"-", "3"}], ",", " ", "7"}], "}"}], ",", " ", 
-   RowBox[{"{", 
-    RowBox[{"z", ",", " ", "3", ",", " ", "13"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.6507268480241613`*^9, 3.6507268846511617`*^9}}]
+    RowBox[{"t", "\[Rule]", "1.333333333337774`"}], "}"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{{3.650918868746064*^9, 3.6509188756224356`*^9}}]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(f)", "Subsubsection",
+ CellChangeTimes->{{3.6509190955819716`*^9, 3.650919097357276*^9}}],
+
+Cell["\<\
+Since the shortest distance between the line and the point is ~4.4 @ t=1.33, \
+there can never be an intersection.\
+\>", "Text",
+ CellChangeTimes->{
+  3.6509191037223363`*^9, {3.6509198678794947`*^9, 3.65091990554503*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(g)", "Subsubsection",
+ CellChangeTimes->{{3.650919123398859*^9, 3.6509191264769945`*^9}}],
+
+Cell["\<\
+Since the shortest distance between the point and the line will be a vector \
+orthogonal to the fly\[CloseCurlyQuote]s path and pointing at the base of \
+Gerald\[CloseCurlyQuote]s neck, finding that vector and then checking the \
+length of it would be another way.\
+\>", "Text",
+ CellChangeTimes->{{3.650919137427952*^9, 3.650919137507966*^9}, {
+  3.6509199086474934`*^9, 3.650920000308153*^9}}]
 }, Open  ]]
+}, Open  ]],
+
+Cell["Problem 2", "Section",
+ CellChangeTimes->{{3.650920022370924*^9, 3.6509200235791297`*^9}}]
 }, Open  ]]
 },
 WindowSize->{944, 1112},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -196,23 +469,51 @@ Cell[889, 30, 410, 9, 126, "Subtitle"],
 Cell[1302, 41, 157, 3, 31, "Input"],
 Cell[CellGroupData[{
 Cell[1484, 48, 94, 1, 70, "Section"],
-Cell[1581, 51, 1870, 49, 132, "Input"],
+Cell[1581, 51, 1709, 47, 112, "Input"],
 Cell[CellGroupData[{
-Cell[3476, 104, 96, 1, 39, "Subsubsection"],
-Cell[3575, 107, 449, 7, 30, "Text"],
-Cell[4027, 116, 289, 7, 31, "Input"]
+Cell[3315, 102, 96, 1, 39, "Subsubsection"],
+Cell[3414, 105, 449, 7, 30, "Text"],
+Cell[3866, 114, 926, 24, 52, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4353, 128, 98, 1, 39, "Subsubsection"],
-Cell[4454, 131, 141, 2, 30, "Text"],
+Cell[4829, 143, 98, 1, 39, "Subsubsection"],
+Cell[4930, 146, 290, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[4620, 137, 299, 6, 52, "Input"],
-Cell[4922, 145, 146, 4, 31, "Output"],
-Cell[5071, 151, 148, 4, 31, "Output"]
+Cell[5245, 156, 819, 17, 31, "Input"],
+Cell[6067, 175, 3672, 71, 282, "Output"]
+}, Open  ]]
 }, Open  ]],
-Cell[5234, 158, 467, 12, 31, "Input"]
+Cell[CellGroupData[{
+Cell[9788, 252, 94, 1, 39, "Subsubsection"],
+Cell[9885, 255, 209, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[10119, 263, 552, 11, 52, "Input"],
+Cell[10674, 276, 3609, 70, 266, "Output"]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14332, 352, 92, 1, 39, "Subsubsection"],
+Cell[14427, 355, 741, 13, 68, "Text"],
+Cell[15171, 370, 241, 6, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15449, 381, 96, 1, 39, "Subsubsection"],
+Cell[15548, 384, 311, 6, 30, "Text"],
+Cell[CellGroupData[{
+Cell[15884, 394, 329, 9, 31, "Input"],
+Cell[16216, 405, 231, 6, 31, "Output"]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16496, 417, 96, 1, 39, "Subsubsection"],
+Cell[16595, 420, 232, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16864, 430, 96, 1, 39, "Subsubsection"],
+Cell[16963, 433, 405, 7, 49, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[17395, 444, 96, 1, 70, "Section"]
 }, Open  ]]
 }
 ]
