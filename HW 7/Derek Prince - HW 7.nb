@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1885,         66]
+NotebookOptionsPosition[      1499,         48]
+NotebookOutlinePosition[      1839,         63]
+CellTagsIndexPosition[      1796,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Vector Plots and Optimization", "Title",
+ CellChangeTimes->{{3.6491712963341722`*^9, 3.649171298593822*^9}, {
+  3.6531443168683157`*^9, 3.6531443266513157`*^9}}],
+
+Cell["\<\
+Derek Prince
+Week 7
+APPM 2450 - 003, Fall 2015
+Due 9th October, 2015\
+\>", "Subtitle",
+ CellChangeTimes->{{3.649171354102372*^9, 3.6491714161854563`*^9}, {
+  3.6491715799723988`*^9, 3.649171580023193*^9}, {3.6491716286345663`*^9, 
+  3.649171649041956*^9}, {3.649171760233305*^9, 3.649171765332196*^9}, {
+  3.6531443068283157`*^9, 3.653144344906316*^9}, {3.6531444259413157`*^9, 
+  3.653144429957316*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.649171551664373*^9, 3.649171559637417*^9}}],
+
+Cell["Patrol Cabin Locations", "Section",
+ CellChangeTimes->{{3.649171478921135*^9, 3.649171479769392*^9}, {
+  3.653144443892316*^9, 3.653144449788316*^9}}]
+}, Open  ]]
+},
+WindowSize->{944, 998},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 167, 2, 101, "Title"],
+Cell[750, 26, 414, 10, 161, "Subtitle"],
+Cell[1167, 38, 157, 3, 31, "Input"],
+Cell[1327, 43, 156, 2, 70, "Section"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
