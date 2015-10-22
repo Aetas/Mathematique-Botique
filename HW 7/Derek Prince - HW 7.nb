@@ -10,44 +10,644 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1885,         66]
-NotebookOptionsPosition[      1499,         48]
-NotebookOutlinePosition[      1839,         63]
-CellTagsIndexPosition[      1796,         60]
+NotebookDataLength[     23346,        719]
+NotebookOptionsPosition[     21252,        648]
+NotebookOutlinePosition[     21593,        663]
+CellTagsIndexPosition[     21550,        660]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Vector Plots and Optimization", "Title",
+Cell["Lagrange Multipliers", "Title",
  CellChangeTimes->{{3.6491712963341722`*^9, 3.649171298593822*^9}, {
-  3.6531443168683157`*^9, 3.6531443266513157`*^9}}],
+  3.6531443168683157`*^9, 3.6531443266513157`*^9}, {3.6545349512468123`*^9, 
+  3.654534998360137*^9}}],
 
 Cell["\<\
 Derek Prince
-Week 7
+Week 9
 APPM 2450 - 003, Fall 2015
-Due 9th October, 2015\
+Due 23rd October, 2015\
 \>", "Subtitle",
  CellChangeTimes->{{3.649171354102372*^9, 3.6491714161854563`*^9}, {
   3.6491715799723988`*^9, 3.649171580023193*^9}, {3.6491716286345663`*^9, 
   3.649171649041956*^9}, {3.649171760233305*^9, 3.649171765332196*^9}, {
   3.6531443068283157`*^9, 3.653144344906316*^9}, {3.6531444259413157`*^9, 
-  3.653144429957316*^9}}],
+  3.653144429957316*^9}, {3.6545349417756853`*^9, 3.6545349463701324`*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.649171551664373*^9, 3.649171559637417*^9}}],
 
-Cell["Patrol Cabin Locations", "Section",
+Cell[CellGroupData[{
+
+Cell["1.) That\[CloseCurlyQuote]s unfortunate.", "Section",
  CellChangeTimes->{{3.649171478921135*^9, 3.649171479769392*^9}, {
-  3.653144443892316*^9, 3.653144449788316*^9}}]
+  3.653144443892316*^9, 3.653144449788316*^9}, {3.654535014985042*^9, 
+  3.654535021650483*^9}, {3.654535088988031*^9, 3.654535094641738*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"e", "[", 
+     RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["x", "2"], "4"], "+", 
+     FractionBox[
+      SuperscriptBox["y", "2"], "9"]}]}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"ellipse", " ", "\[LessEqual]", "1"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"t", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+   RowBox[{"100", " ", "+", " ", 
+    SuperscriptBox["x", "2"], "+", 
+    RowBox[{
+     SuperscriptBox["y", "2"], 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "x"}], ")"}]}]}]}], ";", " ", 
+  RowBox[{"(*", " ", "temp", " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.654537259604179*^9, 3.6545373747375817`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["(a)", "Subsubsection",
+ CellChangeTimes->{{3.6545373271133986`*^9, 3.654537330029224*^9}}],
+
+Cell["\<\
+To solve for critical points, I just need to use the gradients to solve for \
+the zero vector. Temperature is bounded by the ellipse, so solve for temp and \
+check if it fits the ellipse constraints.\
+\>", "Text",
+ CellChangeTimes->{{3.654537384965721*^9, 3.6545374285857906`*^9}, {
+  3.654537945147406*^9, 3.6545379508366604`*^9}, {3.654538177577286*^9, 
+  3.654538239561507*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"grade", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"e", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"gradt", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"t", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.654537441820798*^9, 3.6545374627675486`*^9}, {
+  3.654537686636545*^9, 3.6545377389923997`*^9}, {3.6545383503773317`*^9, 
+  3.65453835414705*^9}}],
+
+Cell[BoxData[
+ RowBox[{"crits", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"gradt", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], " ", "\[Equal]", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Solve", " ", "for", " ", "the", " ", "zero", " ", "vector"}], " ",
+    "*)"}]}]], "Input",
+ CellChangeTimes->{{3.654537743593401*^9, 3.6545377530278225`*^9}, {
+   3.654537856530147*^9, 3.654537883540532*^9}, 3.654537988136594*^9, 
+   3.654538566782473*^9}],
+
+Cell[TextData[{
+ "To classify these, I need ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "xx"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "xy"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", & ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "yy"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and put them through the second derivative test; ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["D", 
+     RowBox[{"(", 
+      RowBox[{"a", ",", "b"}], ")"}]], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["f", "xx"], 
+      SubscriptBox["f", "yy"]}], " ", "-", " ", 
+     SuperscriptBox[
+      RowBox[{"[", 
+       SubscriptBox["f", "xy"], "]"}], "2"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6545379928478975`*^9, 3.654538061277357*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dxy", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"gradt", "[", 
+          RowBox[{"x", ",", "y"}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", " ", "x"}], "]"}], "*", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"gradt", "[", 
+          RowBox[{"x", ",", "y"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}], ",", " ", "y"}], "]"}]}], " ", "-", 
+     " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"gradt", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", " ", "y"}], "]"}], ")"}], 
+      "2"]}]}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "second", " ", "deriv", " ", "determinate", " ", "of", " ", "x", " ", 
+    "and", " ", "y", " ", "test"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"dxy", "/.", "crits"}]}], "Input",
+ CellChangeTimes->{{3.6545380747112846`*^9, 3.6545380819326935`*^9}, {
+  3.6545383314765453`*^9, 3.654538456301428*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"gradt", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ",", " ", "x"}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   SubscriptBox["f", "xx"], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.654538485965574*^9, 3.654538513760441*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"e", "[", 
+   RowBox[{"x", ",", "y"}], "]"}], "/.", "crits", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"All", " ", "less", " ", "than", " ", "1"}], ",", " ", 
+    RowBox[{
+    "so", " ", "they", " ", "are", " ", "in", " ", "the", " ", "domain"}]}], 
+   " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.654538668571372*^9, 3.654538705109826*^9}}],
+
+Cell[TextData[{
+ " Since ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "xx"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is positive, (0,0) is a minimum and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"1", ",", 
+     RowBox[{"\[PlusMinus]", 
+      SqrtBox["2"]}]}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is a saddle because ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["D", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", "y"}], ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is negative at those points."
+}], "Text",
+ CellChangeTimes->{{3.654538522130031*^9, 3.6545386540965304`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(b)", "Subsubsection",
+ CellChangeTimes->{{3.6545387155897007`*^9, 3.6545387161904335`*^9}}],
+
+Cell["\<\
+They must occur on a boundary, as only saddle points and minimum occur inside \
+but the boundary was not tested. This means that a global min could be on a \
+boundary as well.\
+\>", "Text",
+ CellChangeTimes->{{3.654538751154461*^9, 3.6545388115301204`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(c)", "Subsubsection",
+ CellChangeTimes->{{3.6545388221004868`*^9, 3.654538822656816*^9}}],
+
+Cell[TextData[{
+ "Now to make life simple and use Lagrange multipliers to solve along the \
+constraint. Particularly because ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " solves the 3 equations for me.\nThe dear late frisbee\[CloseCurlyQuote]s \
+chalk outline is the constraint, so that will be the G function."
+}], "Text",
+ CellChangeTimes->{{3.654538860192773*^9, 3.654538903651582*^9}, {
+  3.6545389359449067`*^9, 3.654538987072901*^9}}],
+
+Cell[BoxData[
+ RowBox[{"lagcrits", " ", "=", " ", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"gradt", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], " ", "\[Equal]", " ", 
+       RowBox[{"\[Lambda]", "*", 
+        RowBox[{"grade", "[", 
+         RowBox[{"x", ",", "y"}], "]"}]}]}], ",", " ", 
+      RowBox[{
+       RowBox[{"e", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], "\[Equal]", "1"}]}], "}"}], ",", " ", 
+    
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "\[Lambda]"}], "}"}]}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"3", " ", "variables"}], ",", " ", 
+    RowBox[{"so", " ", "3", " ", "equations"}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.6545389963624353`*^9, 3.6545390964341235`*^9}, 
+   3.654539148449216*^9}],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"t", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], "/.", "lagcrits"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6545391530229063`*^9, 3.6545392065455356`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"t", "[", 
+   RowBox[{"x", ",", "y"}], "]"}], "/.", 
+  RowBox[{"crits", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"comparing", " ", "old", " ", "min"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.6545392521791725`*^9, 3.654539270132489*^9}, {
+  3.6545394933447165`*^9, 3.6545394990977488`*^9}}],
+
+Cell[TextData[{
+ "So the original minimum at (0,0) is the global minimum of 100\[Degree]F\n\
+The max is 114.502\[Degree]F at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "27"], 
+      RowBox[{"(", 
+       RowBox[{"5", "-", 
+        SqrtBox["997"]}], ")"}]}], ",", 
+     RowBox[{"\[PlusMinus]", 
+      SqrtBox[
+       RowBox[{
+        FractionBox["1", "6"], 
+        RowBox[{"(", 
+         RowBox[{"36", "-", 
+          RowBox[{
+           FractionBox["5", "27"], 
+           RowBox[{"(", 
+            RowBox[{"5", "-", 
+             SqrtBox["997"]}], ")"}]}]}]}]}]]}]}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6545392763520365`*^9, 3.6545394713818493`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(d)", "Subsubsection",
+ CellChangeTimes->{{3.6545394787793913`*^9, 3.654539479490411*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tPlott", " ", "=", " ", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{"t", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", " ", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", " ", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<TemperatureMap\>\""}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6545395387967696`*^9, 3.654539582698554*^9}, {
+  3.6545396414707956`*^9, 3.654539647519781*^9}, {3.654539987341007*^9, 
+  3.6545399874980187`*^9}, {3.654540230646212*^9, 3.65454026298029*^9}}],
+
+Cell[TextData[{
+ "The firsbee is just given by the ellipse equation with a semi-minor x axis \
+of ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox["4"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", and semi-major y axis of ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox["9"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". This is easy to cenvert to a parametric equation given the fact that it\
+\[CloseCurlyQuote]s just a fancy circle. "
+}], "Text",
+ CellChangeTimes->{{3.6545396510233746`*^9, 3.654539651419119*^9}, {
+  3.654539700024829*^9, 3.654539731642603*^9}, {3.6545397638387547`*^9, 
+  3.6545398009335804`*^9}, {3.6545398403428535`*^9, 3.654539892874775*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"paraellipse", "[", "s_", "]"}], " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Cos", "[", "s", "]"}]}], ",", " ", 
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", "s", "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ePlott", " ", "=", " ", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", 
+        RowBox[{"Cos", "[", "s", "]"}]}], ",", 
+       RowBox[{"3", 
+        RowBox[{"Sin", "[", "s", "]"}]}], ",", 
+       RowBox[{"t", "[", 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"Cos", "[", "s", "]"}]}], ",", 
+         RowBox[{"3", 
+          RowBox[{"Sin", "[", "s", "]"}]}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Thick", ",", "Green"}], "]"}]}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6545399004337835`*^9, 3.654540155987815*^9}, {
+  3.6545401891130795`*^9, 3.65454022482224*^9}, {3.6545402830928993`*^9, 
+  3.654540316217346*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"tPlott", ",", " ", "ePlott"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6545400383546085`*^9, 3.654540056188238*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(e)", "Subsubsection",
+ CellChangeTimes->{{3.6545403520881324`*^9, 3.6545403534812374`*^9}}],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.6545404061527586`*^9, 3.6545404061977587`*^9}, {
+  3.654540608329879*^9, 3.6545406085351467`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"cPlott", " ", "=", " ", 
+   RowBox[{"ContourPlot", "[", 
+    RowBox[{
+     RowBox[{"t", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", " ", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", " ", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<TemperatureMap\>\""}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}], ",", 
+     RowBox[{"Contours", "\[Rule]", "20"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ePlott2D", " ", "=", " ", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"paraellipse", "[", "s", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Thick", ",", "Green"}], "]"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vecPlott", " ", "=", " ", 
+   RowBox[{"VectorPlot", "[", 
+    RowBox[{
+     RowBox[{"gradt", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6545404147739863`*^9, 3.6545405972575397`*^9}, {
+  3.6545408279577556`*^9, 3.654540869562375*^9}, {3.65454091452024*^9, 
+  3.6545409495392375`*^9}, {3.6545413796085863`*^9, 3.6545413962236433`*^9}, {
+  3.6545414533304143`*^9, 3.6545415179012957`*^9}}],
+
+Cell["\<\
+There are two maxima but they are just mirrored over y. Combine into one \
+graphic variable.\
+\>", "Text",
+ CellChangeTimes->{{3.6545406403053427`*^9, 3.654540669671469*^9}, {
+  3.6545408018290644`*^9, 3.654540810410077*^9}, {3.6545415603025537`*^9, 
+  3.654541571072811*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"maxgradvec", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", "y"}], "}"}], "/.", 
+          RowBox[{
+          "lagcrits", "\[LeftDoubleBracket]", "1", 
+           "\[RightDoubleBracket]"}]}], ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], "+", 
+            RowBox[{"0.65", 
+             RowBox[{"grade", "[", 
+              RowBox[{"x", ",", "y"}], "]"}]}]}], ")"}], "/.", 
+          RowBox[{
+          "lagcrits", "\[LeftDoubleBracket]", "1", 
+           "\[RightDoubleBracket]"}]}]}], "}"}], "]"}], ",", "Red", ",", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", "y"}], "}"}], "/.", 
+          RowBox[{
+          "lagcrits", "\[LeftDoubleBracket]", "2", 
+           "\[RightDoubleBracket]"}]}], ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], "+", 
+            RowBox[{"0.65", 
+             RowBox[{"grade", "[", 
+              RowBox[{"x", ",", "y"}], "]"}]}]}], ")"}], "/.", 
+          RowBox[{
+          "lagcrits", "\[LeftDoubleBracket]", "2", 
+           "\[RightDoubleBracket]"}]}]}], "}"}], "]"}]}], "}"}], "]"}]}], ";",
+   " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"The", " ", "replacement", " ", "operator", " ", "is", " ", 
+    RowBox[{"magical", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"maxmindisk", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], "/.", 
+         RowBox[{"lagcrits", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", " ", "0.1"}], "]"}], ",", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], "/.", 
+         RowBox[{"lagcrits", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ",", " ", "0.1"}], "]"}], ",", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], "/.", 
+         RowBox[{"crits", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", " ", "0.1"}], "]"}]}], "}"}],
+     "]"}]}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Two", " ", "max", " ", "first"}], ",", " ", 
+    RowBox[{"then", " ", "min", " ", "disk"}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.654540682860218*^9, 3.6545407098884716`*^9}, {
+  3.6545407455538774`*^9, 3.6545407660575447`*^9}, {3.6545409591330194`*^9, 
+  3.654541039566513*^9}, {3.654541070767461*^9, 3.6545413534199915`*^9}, {
+  3.654541412644503*^9, 3.654541432766513*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+  "cPlott", ",", " ", "ePlott2D", ",", " ", "vecPlott", ",", " ", 
+   "maxgradvec", ",", " ", "maxmindisk"}], "]"}]], "Input",
+ CellChangeTimes->{{3.654540714930406*^9, 3.654540740771445*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(f)", "Subsubsection",
+ CellChangeTimes->{{3.6545415907401714`*^9, 3.65454159125214*^9}}],
+
+Cell["\<\
+The \[Gradient]vectors of the two functions are parallel at the maxima, which \
+makes sense considering the gradient points in the direction of steepest \
+ascent, and the point was found by looking for where this very property and \
+direction is exhibited by both functions. They are related the the boundary \
+by being perpendicular. Which is another property of the \[Gradient]vector. \
+Parallel to the level curves as well. Same relation, different function. \
+\>", "Text",
+ CellChangeTimes->{{3.6545416488953867`*^9, 3.6545416970609903`*^9}, {
+  3.654541737162586*^9, 3.65454180320551*^9}, {3.6545419583188543`*^9, 
+  3.6545420687850447`*^9}, {3.654542117521864*^9, 3.654542132121944*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(g)", "Subsubsection",
+ CellChangeTimes->{{3.6545421385570803`*^9, 3.654542140957506*^9}}],
+
+Cell["They are parallel.", "Text",
+ CellChangeTimes->{{3.654542149007763*^9, 3.6545421586755877`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["(h)", "Subsubsection",
+ CellChangeTimes->{{3.654542167762084*^9, 3.6545421695567694`*^9}}],
+
+Cell["\<\
+See (f), really. The Lagrange Multipliers find when the gradients are \
+parallel, which is the same as when the level curves are parallel due to the \
+porperties of a gradient of a function.\
+\>", "Text",
+ CellChangeTimes->{{3.654542184197503*^9, 3.654542237815355*^9}}]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{944, 998},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{958, 998},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -63,10 +663,63 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 167, 2, 101, "Title"],
-Cell[750, 26, 414, 10, 161, "Subtitle"],
-Cell[1167, 38, 157, 3, 31, "Input"],
-Cell[1327, 43, 156, 2, 70, "Section"]
+Cell[580, 22, 209, 3, 101, "Title"],
+Cell[792, 27, 465, 10, 161, "Subtitle"],
+Cell[1260, 39, 157, 3, 31, "Input"],
+Cell[CellGroupData[{
+Cell[1442, 46, 269, 3, 70, "Section"],
+Cell[1714, 51, 797, 25, 71, "Input"],
+Cell[CellGroupData[{
+Cell[2536, 80, 96, 1, 39, "Subsubsection"],
+Cell[2635, 83, 391, 7, 49, "Text"],
+Cell[3029, 92, 871, 27, 72, "Input"],
+Cell[3903, 121, 617, 16, 31, "Input"],
+Cell[4523, 139, 903, 32, 35, "Text"],
+Cell[5429, 173, 1167, 34, 72, "Input"],
+Cell[6599, 209, 349, 10, 31, "Input"],
+Cell[6951, 221, 387, 10, 31, "Input"],
+Cell[7341, 233, 652, 23, 43, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8030, 261, 98, 1, 39, "Subsubsection"],
+Cell[8131, 264, 267, 5, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8435, 274, 96, 1, 39, "Subsubsection"],
+Cell[8534, 277, 449, 9, 68, "Text"],
+Cell[8986, 288, 814, 23, 52, "Input"],
+Cell[9803, 313, 209, 5, 31, "Input"],
+Cell[10015, 320, 370, 9, 31, "Input"],
+Cell[10388, 331, 762, 25, 84, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11187, 361, 96, 1, 39, "Subsubsection"],
+Cell[11286, 364, 740, 18, 31, "Input"],
+Cell[12029, 384, 674, 17, 55, "Text"],
+Cell[12706, 403, 1197, 35, 72, "Input"],
+Cell[13906, 440, 163, 3, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14106, 448, 98, 1, 39, "Subsubsection"],
+Cell[14207, 451, 137, 2, 30, "Text"],
+Cell[14347, 455, 1854, 48, 92, "Input"],
+Cell[16204, 505, 286, 6, 30, "Text"],
+Cell[16493, 513, 2984, 83, 172, "Input"],
+Cell[19480, 598, 240, 5, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19757, 608, 95, 1, 39, "Subsubsection"],
+Cell[19855, 611, 703, 10, 87, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20595, 626, 96, 1, 39, "Subsubsection"],
+Cell[20694, 629, 102, 1, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20833, 635, 96, 1, 39, "Subsubsection"],
+Cell[20932, 638, 280, 5, 49, "Text"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
