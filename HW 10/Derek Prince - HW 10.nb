@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18727,        552]
-NotebookOptionsPosition[     17069,        498]
-NotebookOutlinePosition[     17410,        513]
-CellTagsIndexPosition[     17367,        510]
+NotebookDataLength[     18176,        515]
+NotebookOptionsPosition[     16855,        471]
+NotebookOutlinePosition[     17196,        486]
+CellTagsIndexPosition[     17153,        483]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,451 +47,424 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[TextData[StyleBox["1.) Plot Ellipsoid", "Subsubsection"]], "Section",
+Cell[TextData[StyleBox["1.) Circular Wire", "Subsubsection"]], "Section",
  CellChangeTimes->{{3.649171478921135*^9, 3.649171479769392*^9}, {
   3.653144443892316*^9, 3.653144449788316*^9}, {3.654535014985042*^9, 
   3.654535021650483*^9}, {3.654535088988031*^9, 3.654535094641738*^9}, {
   3.6557539320731363`*^9, 3.6557539365242157`*^9}, {3.6557540077553244`*^9, 
-  3.6557540138352575`*^9}}],
-
-Cell["First, solve for z.", "Text",
- CellChangeTimes->{{3.6557540304947166`*^9, 3.655754033687028*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"ellipsoid", "[", 
-    RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], " ", "=", " ", 
-   RowBox[{
-    FractionBox[
-     SuperscriptBox["x", "2"], "4"], "+", 
-    FractionBox[
-     SuperscriptBox["y", "2"], "9"], "+", 
-    SuperscriptBox["z", "2"]}]}], ";"}]], "Input",
- CellChangeTimes->{{3.6557540414250417`*^9, 3.6557540922904587`*^9}, {
-  3.6557542094023843`*^9, 3.6557542100133743`*^9}, {3.65575430129847*^9, 
-  3.655754316482695*^9}, {3.6557550862258816`*^9, 3.6557550871618643`*^9}}],
-
-Cell["Note that z will be \[PlusMinus] due to the square root.", "Text",
- CellChangeTimes->{{3.655754096869013*^9, 3.6557541122611957`*^9}}],
-
-Cell[BoxData[
- RowBox[{"ellipsoidplot", " ", "=", " ", 
-  RowBox[{"ContourPlot3D", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"ellipsoid", "[", 
-      RowBox[{"x", ",", "y", ",", "z"}], "]"}], " ", "\[Equal]", "1"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", 
-      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"y", ",", 
-      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"z", ",", 
-      RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", " ", 
-    RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", " ", 
-    RowBox[{"AxesLabel", "\[Rule]", 
-     RowBox[{"{", 
-      RowBox[{"\"\<x\>\"", ",", "\"\<y\>\"", ",", "\"\<z\>\""}], "}"}]}]}], 
-   "]"}]}]], "Input",
- CellChangeTimes->{{3.6557541234952197`*^9, 3.6557541727189035`*^9}, {
-  3.655754214883531*^9, 3.6557542193657618`*^9}, {3.6557542545240836`*^9, 
-  3.655754259993083*^9}, {3.655754290921461*^9, 3.6557543866067915`*^9}, {
-  3.6557545026112742`*^9, 3.655754530063398*^9}, {3.655754560737255*^9, 
-  3.6557546350039563`*^9}, {3.6557546883848743`*^9, 3.655754710718373*^9}, {
-  3.655755099648492*^9, 3.655755110945363*^9}, {3.6557595000986805`*^9, 
-  3.655759529760601*^9}}],
-
-Cell[CellGroupData[{
-
-Cell["2.)", "Subsubsection",
- CellChangeTimes->{{3.655754726904498*^9, 3.655754727557167*^9}}],
-
-Cell[TextData[{
- "Given the equation of an ellipse; ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    RowBox[{
-     FractionBox[
-      SuperscriptBox["x", "2"], "a"], "+", 
-     FractionBox[
-      SuperscriptBox["y", "2"], "b"], "+", 
-     FractionBox[
-      SuperscriptBox["z", "2"], "c"]}], "=", " ", "1"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
- ", and the volume of ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"V", "=", 
-    RowBox[{
-     FractionBox["4", "3"], "\[Pi]abc"}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
- ", confirm with at least two tripple integrals that this is correct."
-}], "Text",
- CellChangeTimes->{{3.6557547835308275`*^9, 3.655754871748269*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"evol", "[", 
-    RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], " ", "=", " ", 
-   RowBox[{
-    FractionBox["4", "3"], "\[Pi]", "*", "a", "*", "b", "*", "c"}]}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.6557548747262726`*^9, 3.6557549120258927`*^9}, 
-   3.655755209150485*^9}],
-
-Cell[TextData[{
- "dzdydx first\nThe bounds can be found by looking at the plots in the xy \
-plane. Set z = 0 and solve for y. \n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    FractionBox[
-     SuperscriptBox["y", "2"], "9"], "=", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"1", "-", 
-       FractionBox[
-        SuperscriptBox["x", "2"], "4"]}], " ", "\[Rule]", " ", 
-      RowBox[{"\[PlusMinus]", "y"}]}], "=", " ", 
-     RowBox[{"3", 
-      SqrtBox[
-       RowBox[{"1", "-", 
-        RowBox[{
-         FractionBox["1", "4"], 
-         SuperscriptBox["x", "2"]}]}]]}]}]}], TraditionalForm]]]
-}], "Text",
- CellChangeTimes->{{3.655754923898775*^9, 3.655754997626789*^9}, {
-  3.65575535334744*^9, 3.6557553851785994`*^9}, {3.6557554171449103`*^9, 
-  3.6557555815620656`*^9}, {3.655755664485632*^9, 3.6557556684234056`*^9}, {
-  3.655758367660181*^9, 3.655758374595972*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"Plot", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"3", 
-       SqrtBox[
-        RowBox[{"1", "-", 
-         FractionBox[
-          SuperscriptBox["x", "2"], "4"]}]]}], ",", 
-      RowBox[{
-       RowBox[{"-", "3"}], 
-       SqrtBox[
-        RowBox[{"1", "-", 
-         FractionBox[
-          SuperscriptBox["x", "2"], "4"]}]]}]}], "}"}], ",", " ", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", 
-      RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "]"}], " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{"\[PlusMinus]", " ", "for"}], " ", "the", " ", "square", " ", 
-    "root"}], " ", "*)"}]}]], "Input",
- CellChangeTimes->{{3.6557552650053587`*^9, 3.6557553038280263`*^9}, {
-  3.6557554345430613`*^9, 3.6557554380133095`*^9}, {3.655755587998048*^9, 
-  3.6557556865936193`*^9}, {3.655758239152811*^9, 3.655758248474442*^9}}],
-
-Cell[BoxData[
- RowBox[{"Solve", "[", 
-  RowBox[{
-   RowBox[{
-    RowBox[{"3", 
-     SqrtBox[
-      RowBox[{"1", "-", 
-       FractionBox[
-        SuperscriptBox["x", "2"], "4"]}]]}], "\[Equal]", "0"}], ",", "x"}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.6557557587278166`*^9, 3.655755824181076*^9}, {
-  3.6557582200449867`*^9, 3.6557582290265036`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"xrange", " ", "=", " ", 
-    RowBox[{"x", "/.", 
-     RowBox[{
-      RowBox[{"Solve", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"3", 
-          SqrtBox[
-           RowBox[{"1", "-", 
-            FractionBox[
-             SuperscriptBox["x", "2"], "4"]}]]}], "\[Equal]", "0"}], ",", 
-        "x"}], "]"}], "[", 
-      RowBox[{"[", "2", "]"}], "]"}]}]}], ";"}], " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{"range", " ", "of", " ", "x", " ", "as", " ", "y", " ", 
-    RowBox[{"varies", "."}]}], " ", "*)"}]}]], "Input",
- CellChangeTimes->{{3.655755831385583*^9, 3.6557558549042*^9}, {
-  3.6557559047738385`*^9, 3.655755931829777*^9}, {3.6557573334119973`*^9, 
-  3.65575734747392*^9}, {3.6557583871726685`*^9, 3.6557584121308966`*^9}}],
-
-Cell[TextData[Cell[BoxData[
- FormBox[
-  RowBox[{
-   SuperscriptBox["y", "2"], "=", " ", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"9", 
-      RowBox[{"(", 
-       RowBox[{"1", "-", " ", 
-        FractionBox[
-         SuperscriptBox["x", "2"], "4"]}], ")"}]}], " ", "\[Rule]", " ", 
-     RowBox[{"\[PlusMinus]", "y"}]}], " ", "=", " ", 
-    RowBox[{"3", 
-     SqrtBox[
-      RowBox[{"1", "-", 
-       FractionBox[
-        SuperscriptBox["x", "2"], "4"]}]]}]}]}], TraditionalForm]],
- FormatType->"TraditionalForm"]], "Text",
- CellChangeTimes->{{3.6557575118344126`*^9, 3.655757570350136*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"yrange", " ", "=", " ", 
-    RowBox[{"3", 
-     SqrtBox[
-      RowBox[{"1", "-", 
-       FractionBox[
-        SuperscriptBox["x", "2"], "4"]}]]}]}], ";"}], " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-     "y", " ", "solved", " ", "for", " ", "x", " ", "when", " ", "z"}], " ", 
-     "=", " ", "0"}], ",", " ", 
-    RowBox[{
-     RowBox[{"essentially", ".", " ", "The"}], " ", "plot", " ", "shows", " ",
-      "the", " ", "range"}]}], " ", "*)"}]}]], "Input",
- CellChangeTimes->{{3.655755864123645*^9, 3.6557559655354986`*^9}, {
-  3.6557563942271075`*^9, 3.6557564029289775`*^9}, {3.655757321613005*^9, 
-  3.655757325206501*^9}, {3.6557575767324853`*^9, 3.6557575866094933`*^9}}],
-
-Cell[TextData[{
- "Solve for z as a function of x&y.\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox["z", "2"], "=", " ", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"1", " ", "-", " ", 
-       RowBox[{"(", 
-        RowBox[{
-         FractionBox[
-          SuperscriptBox["x", "2"], "4"], "+", 
-         FractionBox[
-          SuperscriptBox["y", "2"], "9"]}], ")"}]}], " ", "\[Rule]", " ", 
-      "z"}], "=", 
-     RowBox[{"\[PlusMinus]", 
-      SqrtBox[
-       RowBox[{"1", "-", 
-        RowBox[{"(", 
-         RowBox[{
-          FractionBox[
-           SuperscriptBox["x", "2"], "4"], "+", 
-          FractionBox[
-           SuperscriptBox["y", "2"], "9"]}], ")"}]}]]}]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"]
-}], "Text",
- CellChangeTimes->{{3.6557559963740573`*^9, 3.655756084246055*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"zrange", " ", "=", "  ", 
-   SqrtBox[
-    RowBox[{"1", "-", 
-     RowBox[{"(", 
-      RowBox[{
-       FractionBox[
-        SuperscriptBox["x", "2"], "4"], "+", 
-       FractionBox[
-        SuperscriptBox["y", "2"], "9"]}], ")"}]}]]}], ";"}]], "Input",
- CellChangeTimes->{{3.6557559836856155`*^9, 3.655755989708906*^9}, {
-  3.6557560925494633`*^9, 3.6557561167427735`*^9}, {3.6557563814223285`*^9, 
-  3.655756389213109*^9}, {3.655756505717914*^9, 3.655756512559442*^9}, {
-  3.6557573059966564`*^9, 3.6557573116743927`*^9}}],
-
-Cell[TextData[{
- "Integrate a bunch.\nBecause of the symetry and how all bounds go from -k to \
-k, I just multiplied by 2 every time that happened to make the lower bound 0. \
-Thus, ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox["2", "3"], TraditionalForm]],
-  FormatType->"TraditionalForm"]
-}], "Text",
- CellChangeTimes->{{3.655755973929409*^9, 3.655755977498989*^9}, {
-  3.655757354826907*^9, 3.655757402879127*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  SuperscriptBox["2", "3"], 
-  RowBox[{
-   SubsuperscriptBox["\[Integral]", "0", "xrange"], 
-   RowBox[{
-    SubsuperscriptBox["\[Integral]", "0", "yrange"], 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "zrange"], 
-     RowBox[{
-      RowBox[{"\[DifferentialD]", "z"}], 
-      RowBox[{"\[DifferentialD]", "y"}], 
-      RowBox[{"\[DifferentialD]", "x"}]}]}]}]}]}]], "Input",
- CellChangeTimes->{{3.655755000994795*^9, 3.655755062870208*^9}, {
-  3.655755126000785*^9, 3.6557551362602916`*^9}, {3.655756127579091*^9, 
-  3.6557562483183775`*^9}, {3.6557563311353006`*^9, 3.655756356196974*^9}, {
-  3.655756412300992*^9, 3.6557564921764193`*^9}, {3.6557565477008605`*^9, 
-  3.6557566372239113`*^9}, {3.6557567055109386`*^9, 3.6557567152070026`*^9}, {
-  3.655756840193488*^9, 3.6557568538091774`*^9}, {3.6557569233277063`*^9, 
-  3.6557569351799984`*^9}, {3.655757044923521*^9, 3.655757178788293*^9}, {
-  3.6557572100420523`*^9, 3.655757244594037*^9}, {3.655757278999797*^9, 
-  3.655757283995077*^9}, {3.6557574436656375`*^9, 3.65575748778209*^9}, {
-  3.655757609063826*^9, 3.6557576253075867`*^9}, {3.6557577087681217`*^9, 
-  3.655757772692563*^9}, {3.655758308473796*^9, 3.6557583364681296`*^9}}],
-
-Cell["\<\
-Now for the second way... by solving for x as a function of y, I get...\
-\>", "Text",
- CellChangeTimes->{{3.655758446588033*^9, 3.6557585231519704`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"xrange2", " ", "=", " ", 
-   FormBox[
-    RowBox[{"2", 
-     SqrtBox[
-      RowBox[{"1", "-", 
-       FractionBox[
-        SuperscriptBox["y", "2"], "9"]}]]}],
-    TraditionalForm]}], ";"}]], "Input",
- CellChangeTimes->{{3.6557585250169697`*^9, 3.655758528655959*^9}}],
-
-Cell["Now y goes from -3 to 3 and z stays the same.", "Text",
- CellChangeTimes->{{3.6557585332422886`*^9, 3.655758558457777*^9}, {
-  3.6557585986045456`*^9, 3.655758606117141*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"yrange2", " ", "=", " ", "3"}], ";"}]], "Input",
- CellChangeTimes->{{3.6557586144827156`*^9, 3.6557586180111*^9}}],
-
-Cell["New integration order: dzdxdy", "Text",
- CellChangeTimes->{3.6557586117405214`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  SuperscriptBox["2", "3"], 
-  RowBox[{
-   SubsuperscriptBox["\[Integral]", "0", "yrange2"], 
-   RowBox[{
-    SubsuperscriptBox["\[Integral]", "0", "xrange2"], 
-    RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "zrange"], 
-     RowBox[{
-      RowBox[{"\[DifferentialD]", "z"}], 
-      RowBox[{"\[DifferentialD]", "x"}], 
-      RowBox[{"\[DifferentialD]", "y"}]}]}]}]}]}]], "Input",
- CellChangeTimes->{{3.6557585799192314`*^9, 3.6557585814730415`*^9}, {
-  3.6557586222813916`*^9, 3.655758635172624*^9}}],
-
-Cell[BoxData[
- RowBox[{"evol", "[", 
-  RowBox[{"2", ",", "3", ",", "1"}], "]"}]], "Input",
- CellChangeTimes->{{3.6557551883693457`*^9, 3.6557552010669794`*^9}, {
-  3.65575769114168*^9, 3.6557576980970273`*^9}}],
-
-Cell["That took forever to evaluate, but it did equal 8\[Pi].", "Text",
- CellChangeTimes->{{3.655758745156206*^9, 3.6557587593407125`*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["3.)", "Subsubsection",
- CellChangeTimes->{{3.6557587716861444`*^9, 3.6557587725325575`*^9}}],
+  3.6557540138352575`*^9}, {3.6564401039008846`*^9, 3.6564401086482024`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
   RowBox[{
-   RowBox[{"inertiay", "[", 
-    RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], " ", "=", " ", 
    RowBox[{
-    FractionBox["4", "15"], "\[Pi]", "*", "a", "*", "b", "*", "c", 
-    RowBox[{"(", 
-     RowBox[{
-      SuperscriptBox["a", "2"], "+", 
-      SuperscriptBox["c", "2"]}], ")"}]}]}], " ", 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"inertiay", "[", 
-   RowBox[{"2", ",", "3", ",", "1"}], "]"}], " ", 
+    RowBox[{"\[Delta]", "[", 
+     RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+    RowBox[{"5", "-", 
+     SuperscriptBox["x", "2"]}]}], ";"}], " ", 
   RowBox[{"(*", " ", 
-   RowBox[{"Also", " ", "8", "\[Pi]"}], " ", "*)"}]}]}], "Input",
- CellChangeTimes->{{3.6557588213725247`*^9, 3.6557588831325502`*^9}, {
-  3.6557589324610023`*^9, 3.6557589345146847`*^9}, {3.655759345017089*^9, 
-  3.655759385397455*^9}}],
-
-Cell[TextData[{
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["r", "y"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
- " is the distance from the point of integration to the y-axis. Isn\
-\[CloseCurlyQuote]t that just ",
- Cell[BoxData[
-  FormBox[
-   SqrtBox[
+   RowBox[{
     RowBox[{
-     SuperscriptBox["x", "2"], "+", 
-     SuperscriptBox["z", "2"]}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
- "? Distance formula and all that."
-}], "Text",
- CellChangeTimes->{{3.6557589446373777`*^9, 3.6557589670564365`*^9}, {
-  3.655759192598707*^9, 3.6557592618602037`*^9}, {3.655759327683982*^9, 
-  3.6557593320387983`*^9}, {3.6557596272992077`*^9, 3.6557596303978205`*^9}, {
-  3.655759771731834*^9, 3.6557597886284533`*^9}, {3.655759934098011*^9, 
-  3.655759940437436*^9}}],
+     RowBox[{
+     "Since", " ", "density", " ", "is", " ", "highest", " ", "at", " ", 
+      "x"}], " ", "=", " ", 
+     RowBox[{
+     "0", " ", "and", " ", "decreases", " ", "exponentially", " ", "as", " ", 
+      "x", " ", "grows"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"I", " ", "can", " ", "ecpect", " ", "y"}], "-", 
+     RowBox[{"bar", " ", "to", " ", "be", " ", 
+      RowBox[{"centered", "."}]}]}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"X", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"2", 
+    RowBox[{"Cos", "[", "t", "]"}]}]}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Upper", " ", "semicircle"}], ",", " ", 
+    RowBox[{"only", " ", "need", " ", "positive", " ", "root"}]}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Y", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"2", 
+    RowBox[{"Sin", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"X", "[", "t", "]"}], ",", " ", 
+     RowBox[{"Y", "[", "t", "]"}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6564401184611*^9, 3.6564401855934124`*^9}, 
+   3.6564402513756647`*^9, {3.6564402963548975`*^9, 3.656440299907982*^9}, {
+   3.6564561545647264`*^9, 3.656456200876459*^9}, {3.6564562617877665`*^9, 
+   3.6564563194713907`*^9}, {3.6564564874309425`*^9, 3.65645649713918*^9}, {
+   3.6564565870551767`*^9, 3.656456616601905*^9}, {3.6564567397649856`*^9, 
+   3.6564567726123533`*^9}, {3.6564568102423477`*^9, 3.656456827990473*^9}, {
+   3.6564568911076903`*^9, 3.656456915145794*^9}}],
+
+Cell["\<\
+(a) - Total mass of the wire is the deisity function integrated across the \
+semi-circle.\
+\>", "Text",
+ CellChangeTimes->{{3.6564402407463956`*^9, 3.6564402455823345`*^9}, {
+  3.656456328142025*^9, 3.656456342266179*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  SuperscriptBox["2", "3"], 
   RowBox[{
-   SubsuperscriptBox["\[Integral]", "0", "xrange"], 
-   RowBox[{
-    SubsuperscriptBox["\[Integral]", "0", "yrange"], 
+   RowBox[{"mynorm", "[", "t_", "]"}], " ", "=", " ", 
+   SqrtBox[
     RowBox[{
-     SubsuperscriptBox["\[Integral]", "0", "zrange"], 
      RowBox[{
-      RowBox[{"(", 
-       RowBox[{
-        SuperscriptBox["x", "2"], "+", 
-        SuperscriptBox["z", "2"]}], ")"}], 
-      RowBox[{"\[DifferentialD]", "z"}], 
-      RowBox[{"\[DifferentialD]", "y"}], 
-      RowBox[{"\[DifferentialD]", "x", " ", 
-       RowBox[{"(*", " ", 
-        RowBox[{
-         RowBox[{"Also", " ", "equal", " ", "to", " ", "8", "\[Pi]"}], ",", 
-         " ", 
-         RowBox[{"correct", "."}]}], " ", "*)"}]}]}]}]}]}]}]], "Input",
- CellChangeTimes->{{3.6557598209772835`*^9, 3.6557598289118285`*^9}, {
-  3.655759869553609*^9, 3.65575993044494*^9}}],
+      RowBox[{"r", "'"}], "[", "t", "]"}], ".", 
+     RowBox[{
+      RowBox[{"r", "'"}], "[", "t", "]"}]}]]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656456666959873*^9, 3.6564566724322166`*^9}, {
+  3.6564569246320486`*^9, 3.656456949097107*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mass", " ", "=", " ", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{
+     RowBox[{"-", "\[Pi]"}], "/", "2"}], 
+    RowBox[{"\[Pi]", "/", "2"}]], 
+   RowBox[{
+    RowBox[{"\[Delta]", "[", 
+     RowBox[{
+      RowBox[{"X", "[", "t", "]"}], ",", 
+      RowBox[{"Y", "[", "t", "]"}]}], "]"}], 
+    RowBox[{"mynorm", "[", "t", "]"}], 
+    RowBox[{"\[DifferentialD]", "t"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6564569617251883`*^9, 3.656456975275078*^9}, {
+  3.656457027059039*^9, 3.656457046225181*^9}, {3.656457083839903*^9, 
+  3.6564571307932787`*^9}}],
 
 Cell["\<\
-Since it is still in cartesian coordinates, I just used the same bounds for \
-the integrals as from section 2. Cylindrical would have been faster if I didn\
-\[CloseCurlyQuote]t already ahve the bounds.\
+(b) - Center of Mass. y-bar will be centered at y = 0 due to the density \
+function only scaling in x. \
 \>", "Text",
- CellChangeTimes->{{3.6557599856614504`*^9, 3.6557600352012224`*^9}}]
+ CellChangeTimes->{{3.656457158540182*^9, 3.656457225512001*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mx", " ", "=", " ", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{
+     RowBox[{"-", "\[Pi]"}], "/", "2"}], 
+    RowBox[{"\[Pi]", "/", "2"}]], 
+   RowBox[{
+    RowBox[{"Y", "[", "t", "]"}], 
+    RowBox[{"\[Delta]", "[", 
+     RowBox[{
+      RowBox[{"X", "[", "t", "]"}], ",", 
+      RowBox[{"Y", "[", "t", "]"}]}], "]"}], 
+    RowBox[{"mynorm", "[", "t", "]"}], 
+    RowBox[{"\[DifferentialD]", "t", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{"since", " ", "this", " ", "is", " ", "mathematica"}], ",", 
+       " ", 
+       RowBox[{
+        RowBox[{
+        "I", " ", "might", " ", "as", " ", "well", " ", "do", " ", "the", " ",
+          "calculation", " ", "to", " ", "check"}], "..."}]}], " ", 
+      "*)"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6564572356339035`*^9, 3.6564573036948647`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"my", " ", "=", " ", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{
+     RowBox[{"-", "\[Pi]"}], "/", "2"}], 
+    RowBox[{"\[Pi]", "/", "2"}]], 
+   RowBox[{
+    RowBox[{"X", "[", "t", "]"}], 
+    RowBox[{"\[Delta]", "[", 
+     RowBox[{
+      RowBox[{"X", "[", "t", "]"}], ",", 
+      RowBox[{"Y", "[", "t", "]"}]}], "]"}], 
+    RowBox[{"mynorm", "[", "t", "]"}], 
+    RowBox[{"\[DifferentialD]", "t"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6564572624960337`*^9, 3.6564572735574837`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mcenter", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    FractionBox["my", "mass"], ",", 
+    FractionBox["mx", "mass"]}], " ", "}"}]}]], "Input",
+ CellChangeTimes->{{3.656457328443338*^9, 3.6564573856079173`*^9}}],
+
+Cell["(c) - Density plot, wire, and center of mass.", "Text",
+ CellChangeTimes->{{3.656457398121833*^9, 3.6564574203497066`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"com", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Disk", "[", 
+     RowBox[{"mcenter", ",", " ", "0.03"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dplot", " ", "=", " ", 
+   RowBox[{"DensityPlot", "[", 
+    RowBox[{
+     RowBox[{"\[Delta]", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wire", " ", "=", " ", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"r", "[", "t", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", 
+       FractionBox[
+        RowBox[{"-", "\[Pi]"}], "2"], ",", 
+       FractionBox["\[Pi]", "2"]}], "}"}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Thick", ",", " ", "Red"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{"dplot", ",", "com", ",", "wire"}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"I", " ", "guess", " ", "it", " ", 
+    RowBox[{"doesn", "'"}], "t", " ", "care", " ", "about", " ", "aspect", 
+    " ", 
+    RowBox[{"ratios", ".", " ", "Or"}], " ", "more", " ", "likely", " ", 
+    RowBox[{"I", "'"}], "m", " ", "not", " ", "doing", " ", "it", " ", 
+    RowBox[{"right", "."}]}], " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.656457617343355*^9, 3.6564577056271815`*^9}, {
+  3.656457888442813*^9, 3.6564579250205455`*^9}, {3.65645795844136*^9, 
+  3.6564580774117374`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["2.) What\[CloseCurlyQuote]s your vector, Victor?", "Subsubsection",
+ CellChangeTimes->{{3.656458098366182*^9, 3.656458132860033*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"FField", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "x", "]"}], ",", 
+     RowBox[{"Sin", "[", "y", "]"}]}], " ", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656458270905204*^9, 3.6564582796631804`*^9}, {
+   3.656458343290664*^9, 3.656458343477024*^9}, {3.6564584152905135`*^9, 
+   3.6564584347171707`*^9}, 3.6564585727134*^9, {3.656458807980272*^9, 
+   3.656458809708249*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"X", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"Cos", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Y", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"Sin", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"X", "[", "t", "]"}], ",", 
+     RowBox[{"Y", "[", "t", "]"}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.656458601899334*^9, 3.6564586528213835`*^9}, 
+   3.6564589699345026`*^9}],
+
+Cell["(a) - Victor\[CloseCurlyQuote]s Vector", "Text",
+ CellChangeTimes->{{3.6564590613632517`*^9, 3.6564590677891436`*^9}, {
+  3.6564591056351523`*^9, 3.656459125808459*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Fplot", " ", "=", " ", 
+   RowBox[{"VectorPlot", "[", 
+    RowBox[{
+     RowBox[{"FField", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", 
+        FractionBox["3", "2"]}], ",", " ", 
+       FractionBox["3", "2"]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", 
+        FractionBox["3", "2"]}], ",", 
+       FractionBox["3", "2"]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"circle", " ", "=", " ", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"r", "[", "t", "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Thick", ",", " ", "Red"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"Fplot", ",", " ", "circle"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6564587029110165`*^9, 3.6564589288513966`*^9}, {
+  3.6564589827807837`*^9, 3.6564589925598125`*^9}}],
+
+Cell[TextData[{
+ "(b) - Flux across boundary\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Integral]", "C"], 
+    RowBox[{
+     RowBox[{"F", ".", "n"}], " ", "ds"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " <- \[Phi] over boundary\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Integral]", "C"], 
+    RowBox[{
+     RowBox[{"F", ".", "T"}], " ", "ds"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " <- Flow along boundary"
+}], "Text",
+ CellChangeTimes->{{3.656459054452248*^9, 3.656459056908134*^9}, {
+  3.6564591561714535`*^9, 3.6564591996523867`*^9}, {3.656459262873416*^9, 
+  3.6564593005698667`*^9}, {3.6564600620019226`*^9, 3.656460065320202*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{"r", "'"}], "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"magv", "[", "t_", "]"}], " ", "=", " ", 
+   SqrtBox[
+    RowBox[{
+     RowBox[{"v", "[", "t", "]"}], ".", 
+     RowBox[{"v", "[", "t", "]"}]}]]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.656459363412805*^9, 3.6564593866108475`*^9}, {
+   3.656459429120489*^9, 3.6564594312496195`*^9}, 3.656459524894196*^9, {
+   3.656459589880651*^9, 3.65645961547345*^9}, {3.6564597442825084`*^9, 
+   3.656459751991229*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"T", "[", "t_", "]"}], " ", "=", " ", 
+   FractionBox[
+    RowBox[{"v", "[", "t", "]"}], 
+    RowBox[{"mnorm", "[", "t", "]"}]]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656459329304502*^9, 3.656459355067856*^9}, {
+  3.6564593921060815`*^9, 3.656459394296454*^9}, {3.656459621491949*^9, 
+  3.656459650242318*^9}, {3.656459747439888*^9, 3.656459753615872*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"magt", "[", "t_", "]"}], " ", "=", " ", 
+   SqrtBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"T", "'"}], "[", "t", "]"}], ".", 
+     RowBox[{
+      RowBox[{"T", "'"}], "[", "t", "]"}]}]]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6564594369582405`*^9, 3.6564594429373655`*^9}, {
+  3.6564594845069857`*^9, 3.656459495433839*^9}, {3.656459627131277*^9, 
+  3.656459633079691*^9}, {3.6564597011993837`*^9, 3.6564597099750357`*^9}, {
+  3.656459745555526*^9, 3.6564597584105887`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", "[", "t_", "]"}], " ", "=", " ", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"T", "'"}], "[", "t", "]"}], 
+    RowBox[{"magt", "[", "t", "]"}]]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6564596397001143`*^9, 3.6564596436649246`*^9}, {
+   3.656459713938492*^9, 3.656459732323948*^9}, {3.6564597681371126`*^9, 
+   3.656459769463792*^9}, 3.656459803269286*^9, {3.656460730948032*^9, 
+   3.65646080860859*^9}, {3.6564608506194963`*^9, 3.6564608512018642`*^9}}],
+
+Cell[TextData[{
+ "I just read that it doesn\[CloseCurlyQuote]t actually want me to calculate \
+the values, just approximate where I think the integral will be greatest \
+based on the fact that one is a dot product with the unit norm, and one is a \
+dot with the unit tangent. So basically, where the Force Field is parallel to \
+the circle, the dot between F and N is greatest - which is \[Phi]. When it is \
+perpendicular to the circle\[CloseCurlyQuote]s path, the dot between T and F \
+are greatest, yielding the largest flow.\nSo taking into account the strength \
+of the F field at each point and using parametric coordinates for the circle \
+boundary...\nFlow will be largest at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", ",", 
+      RowBox[{"\[PlusMinus]", 
+       FractionBox["\[Pi]", "4"]}]}], ")"}], " ", "while", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", ",", "0"}], ")"}], " ", "and", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", ",", "\[Pi]"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " are slightly less due to the strength of the field.\n\[Phi] Will be \
+largest at ~",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", ",", " ", 
+      FractionBox[
+       RowBox[{"3", "\[Pi]"}], "4"]}], ")"}], " ", "and", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", ",", " ", 
+      FractionBox[
+       RowBox[{"5", "\[Pi]"}], "4"]}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " due to F being parallel."
+}], "Text",
+ CellChangeTimes->{{3.656459856311696*^9, 3.6564598653793726`*^9}, {
+  3.656459902177807*^9, 3.656459951260682*^9}, {3.6564599998525963`*^9, 
+  3.656460056213434*^9}, {3.6564600864815903`*^9, 3.656460418099668*^9}}],
+
+Cell["\<\
+(c) 
+Taking into considderation that the loop is traversed in a counter-clockwise \
+fasion, is suspect the \[Phi] to be 0 due to negative \[Phi] from 0 -> \[Pi], \
+and equal and positive \[Phi] over \[Pi] -> 2\[Pi] summing to zero.
+For flow, the field is mirrored across x, so the flux will be 0 again since \
+half of the distance along the loop will be \[OpenCurlyQuote]against\
+\[CloseCurlyQuote] the F Field, while the other half will be \
+\[OpenCurlyQuote]with\[CloseCurlyQuote] the F Field, taking the dot product \
+into account.\
+\>", "Text",
+ CellChangeTimes->{{3.6564604227695556`*^9, 3.656460582777054*^9}, {
+  3.656460615904986*^9, 3.6564607215209665`*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -517,40 +490,30 @@ Cell[580, 22, 324, 4, 101, "Title"],
 Cell[907, 28, 614, 12, 161, "Subtitle"],
 Cell[1524, 42, 157, 3, 31, "Input"],
 Cell[CellGroupData[{
-Cell[1706, 49, 390, 5, 58, "Section"],
-Cell[2099, 56, 103, 1, 30, "Text"],
-Cell[2205, 59, 533, 13, 49, "Input"],
-Cell[2741, 74, 140, 1, 30, "Text"],
-Cell[2884, 77, 1190, 27, 52, "Input"],
+Cell[1706, 49, 439, 5, 58, "Section"],
+Cell[2148, 56, 1897, 48, 112, "Input"],
+Cell[4048, 106, 232, 5, 30, "Text"],
+Cell[4283, 113, 375, 11, 35, "Input"],
+Cell[4661, 126, 591, 16, 49, "Input"],
+Cell[5255, 144, 193, 4, 30, "Text"],
+Cell[5451, 150, 856, 24, 92, "Input"],
+Cell[6310, 176, 526, 15, 49, "Input"],
+Cell[6839, 193, 239, 6, 44, "Input"],
+Cell[7081, 201, 129, 1, 30, "Text"],
+Cell[7213, 204, 1837, 49, 126, "Input"],
 Cell[CellGroupData[{
-Cell[4099, 108, 94, 1, 39, "Subsubsection"],
-Cell[4196, 111, 691, 22, 65, "Text"],
-Cell[4890, 135, 322, 9, 46, "Input"],
-Cell[5215, 146, 867, 24, 95, "Text"],
-Cell[6085, 172, 874, 26, 57, "Input"],
-Cell[6962, 200, 354, 11, 57, "Input"],
-Cell[7319, 213, 787, 21, 57, "Input"],
-Cell[8109, 236, 587, 18, 60, "Text"],
-Cell[8699, 256, 748, 20, 80, "Input"],
-Cell[9450, 278, 819, 27, 76, "Text"],
-Cell[10272, 307, 557, 14, 69, "Input"],
-Cell[10832, 323, 418, 10, 70, "Text"],
-Cell[11253, 335, 1226, 23, 47, "Input"],
-Cell[12482, 360, 163, 3, 30, "Text"],
-Cell[12648, 365, 303, 10, 57, "Input"],
-Cell[12954, 377, 180, 2, 30, "Text"],
-Cell[13137, 381, 149, 3, 31, "Input"],
-Cell[13289, 386, 89, 1, 30, "Text"],
-Cell[13381, 389, 532, 14, 48, "Input"],
-Cell[13916, 405, 210, 4, 31, "Input"],
-Cell[14129, 411, 139, 1, 30, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[14305, 417, 98, 1, 39, "Subsubsection"],
-Cell[14406, 420, 712, 19, 68, "Input"],
-Cell[15121, 441, 768, 20, 44, "Text"],
-Cell[15892, 463, 839, 23, 47, "Input"],
-Cell[16734, 488, 295, 5, 49, "Text"]
+Cell[9075, 257, 139, 1, 39, "Subsubsection"],
+Cell[9217, 260, 500, 12, 31, "Input"],
+Cell[9720, 274, 594, 17, 72, "Input"],
+Cell[10317, 293, 175, 2, 30, "Text"],
+Cell[10495, 297, 1133, 33, 88, "Input"],
+Cell[11631, 332, 712, 21, 82, "Text"],
+Cell[12346, 355, 612, 16, 54, "Input"],
+Cell[12961, 373, 405, 9, 48, "Input"],
+Cell[13369, 384, 525, 13, 35, "Input"],
+Cell[13897, 399, 506, 11, 48, "Input"],
+Cell[14406, 412, 1729, 40, 170, "Text"],
+Cell[16138, 454, 677, 12, 106, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
